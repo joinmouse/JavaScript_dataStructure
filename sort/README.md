@@ -7,3 +7,5 @@
 
 - 归并排序: merge.js (OlogO)
 ![avatar](./image/merge.png)
+
+- 快速排序(分治法): quick.js
