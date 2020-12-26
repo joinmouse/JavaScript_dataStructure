@@ -97,6 +97,27 @@ class SingleLinkedList {
         this.remove(last)
     }
 
+    // 反转链表, 迭代 O(n)
+    reverseList() {
+        this.displayArray()
+        if(head == null || head.next == null){
+            return head
+        }
+        let pre = null   //记录当前上一个节点
+        let temp = null  //记录当前节点的下一个节点
+        let current = this.head;
+        // 遍历、迭代
+        while(current !== null) {
+            temp = current.next
+            // 将当前节点的next指向pre即可
+            current.next = pre
+            // pre、current前进下次迭代
+            pre = current
+            current = temp
+        }
+        this.head = pre
+    }
+
     // 获取链表长度
     getLength() {
         let currentNode = this.head
