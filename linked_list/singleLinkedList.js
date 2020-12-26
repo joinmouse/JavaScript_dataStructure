@@ -56,7 +56,7 @@ class SingleLinkedList {
             }
             currentIndex++
         }
-        return currentNode.element;
+        return currentNode;
     }
 
     // 插入
@@ -75,21 +75,39 @@ class SingleLinkedList {
     }
 
     // 删除
-    delete(index) {
+    remove(index) {
         // 删掉的是头节点
         if(index === 0) {
             this.head = this.head.next
             return
         }
         // 非头节点
-        let deletePreNode = this.head
-        let deletePreIndex = 0
-        while(deletePreIndex < index-1) {
-            deletePreNode = deletePreNode.next
-            deletePreIndex++
+        let deleteNode = this.head
+        let deleteIndex = 0
+        while(deleteIndex < index-1) {
+            deleteNode = deleteNode.next
+            deleteIndex += 1
         }
-        deletePreNode.next = deletePreNode.next.next
+        deleteNode.next = deleteNode.next.next
     }
+
+    // 删除节点从倒数开始
+    removeNthFromEnd(index) {
+        let last = this.getLength() - index
+        this.remove(last)
+    }
+
+    // 获取链表长度
+    getLength() {
+        let currentNode = this.head
+        let length = 0
+        while(currentNode !== null) {
+            length += 1
+            currentNode = currentNode.next
+        }
+        return length
+    }
+
 
     // 打印出链表元素
     display() {
