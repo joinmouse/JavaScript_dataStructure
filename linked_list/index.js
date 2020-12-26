@@ -41,4 +41,3 @@ LinkedList.prototype.insert = function(newElement, item) {
     newNode.next = currentNode.next
     currentNode.next = newNode
 }
-
