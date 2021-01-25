@@ -3,11 +3,13 @@
 ### 2、链表 Linked list
 
 ### 3、实现一个hashMap
-- 开放定址法
-- 拉链法
+- 开放定址法: 
+hashMap/HashMapLine
+
+- 拉链法: 
+hashMap/HashMapLinked
 
 ### 3、动态规划 DP
-
 
 ### 4、树 tree
 - bfs: 广度优先搜索(Breadth-First-Search)
