@@ -39,7 +39,6 @@ class SingleLinkedList {
         this.head = newNode
         newNode.next = currentNode
     }
-
     // 查询操作，时间复杂度O(n)
     get(index) {
         if(index < 0) {
@@ -58,7 +57,6 @@ class SingleLinkedList {
         }
         return currentNode;
     }
-
     // 插入
     insert(index, element){
         let newNode = new Node(element)
@@ -73,7 +71,6 @@ class SingleLinkedList {
         insertNode.next = newNode;
         return this.head
     }
-
     // 删除
     remove(index) {
         // 删掉的是头节点
@@ -100,8 +97,8 @@ class SingleLinkedList {
     // 反转链表, 迭代 O(n)
     reverseList() {
         this.displayArray()
-        if(head == null || head.next == null){
-            return head
+        if(this.head == null || this.head.next == null){
+            return this.head
         }
         let pre = null   //记录当前上一个节点
         let temp = null  //记录当前节点的下一个节点
@@ -128,7 +125,6 @@ class SingleLinkedList {
         }
         return length
     }
-
 
     // 打印出链表元素
     display() {
