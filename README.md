@@ -19,3 +19,6 @@ hashMap/HashMapLinked
 - dfs: 深度优先搜索(Depth-First-Search)
 
         使用的是栈: 先进后出
+
+### 5、常见算法题
+- 数组拍平

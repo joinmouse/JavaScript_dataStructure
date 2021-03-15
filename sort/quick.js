@@ -9,8 +9,8 @@ function swap (A, i, j) {
 
 function partitio(A, lo, hi) {
     // pivot 中心点
-    const pivot = A[hi - 1]
-    let i = lo, j = hi - 1
+    const pivot = A[hi-1]
+    let i = lo, j = hi-1
     // 小于中心点范围: [lo, i)
     // 未确定的范围是: [i, j)
     // 大于中心点范围: [j, hi - 1)
@@ -32,11 +32,11 @@ function partitio(A, lo, hi) {
     return j
 }
 
-function qsort(A, lo = 0, hi = A.length) {
-    if(hi - lo <= 1) return
-    const p = partitio(A, lo, hi)
-    qsort(A, lo, p)
-    qsort(A, p+1, hi)
+function qsort(A, left=0, right=A.length-1) {
+    if(right <= left) return
+    let p = partitio(A, left, right)
+    qsort(A, left, p)
+    qsort(A, p+1, right)
 }
 
 // 排序test
