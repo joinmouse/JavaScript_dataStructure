@@ -1,7 +1,6 @@
 # sort
 
 ### 排序算法
-
 - 插入排序: insert.js (O^2)
 - 冒泡排序: bubble.js (O^2)
 
@@ -9,3 +8,5 @@
 ![avatar](./image/merge.png)
 
 - 快速排序(分治法): quick.js
+
+- 基数排序: roikeSort.js
