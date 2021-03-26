@@ -3,18 +3,19 @@
 * 2020/5/25
 */
 function swap(A, i, j) {
-    const t = A[i]
+    let temp = A[i]
     A[i] = A[j]
-    A[j] = t
+    A[j] = temp
 }
 
 function bubble_sort(A) {
+    // 外层循环不变式
     for(let i = A.length - 1; i >= 1; i--) {
+        // 内层循环不变式
         for(let j = 1; j <= i; j++) {
             // 循环结束j指向A[0]~A[j]中的最大值
             A[j - 1] > A[j] && swap(A, j-1, j)
         }
-        // 循环结束A[i]-A[n-1]已排序
     }
 }
 

@@ -1,6 +1,6 @@
 /*
-* 插入排序
-* 2020/5/22
+** 插入排序
+** 2020/5/22
 */
 function insert(A, i, x) {
     // p 指向下一个需要比较的元素
@@ -8,7 +8,7 @@ function insert(A, i, x) {
     let p = i - 1
     while(p >= 0 && A[p] > x) {
         A[p+1] = A[p]
-        p -= 1
+        p--
     }
     A[p+1] = x
 }
