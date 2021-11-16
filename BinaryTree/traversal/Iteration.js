@@ -19,22 +19,19 @@ let preorderTraversal = function(root, res = []) {
 // 出栈: 左 ——> 中 ——> 右
 let inorderTraversal = function(root, res = []) {
     if(!root) return res
-    const stack = [root]
-    let current = null
-    while(stack.length) {
-        if(current.left) {
+    const stack = []
+    let current = root
+    while(stack.length || current) {
+        if(current) {
+            stack.push(current)
             // left
-            stack.push(current.left)
+            current = current.left
         }else {
-            // 中
+            // 弹出 中
             current = stack.pop()
             res.push(current.val)
             // right
-            if(current.right) {
-                current = stack.pop()
-                res.push(current.val)
-                current.right && stack.push(current.right)
-            }
+            current = current.right
         }
     }
     return res
