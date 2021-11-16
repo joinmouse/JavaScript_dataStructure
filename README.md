@@ -9,7 +9,7 @@
 
 - 拉链法: hashMap/HashMapLinked
 
-### 4、树(tree)
+### 4、二叉树(Binary Tree)
 
 ### 4.1 二叉搜索树: binary search tree
 tree/BinarySearchTree
