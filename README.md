@@ -11,10 +11,17 @@
 
 ## 4、二叉树(Binary Tree)
 
-### <1> 二叉树: binary tree
-- 遍历(递归 & 遍历)
+### <1> 二叉树遍历: binary tree
+- 前、中、后遍历(递归 & 遍历)
 
-### <2> 二叉搜索树: binary search tree
+- 层序遍历
+
+### <2> 二叉树的属性: binary tree
+- 前、中、后遍历(递归 & 遍历)
+
+- 层序遍历
+
+### <3> 二叉搜索树遍历: binary search tree
 - tree/BinarySearchTree
 
 ## 5、图(graph)
