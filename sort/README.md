@@ -1,6 +1,7 @@
 # sort
 
 ### 比较排序算法
+
 - 插入排序: insert.js (O^2)
 - 冒泡排序: bubble.js (O^2)
 
