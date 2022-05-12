@@ -9,9 +9,9 @@ function swap(A, i, j) {
 
 function partitio(A, lo, hi) {
   // pivot 中心点
-  const pivot = A[hi - 1];
+  const pivot = A[hi];
   let i = lo,
-    j = hi - 1;
+    j = hi;
   // 小于中心点范围: [lo, i)
   // 未确定的范围是: [i, j)
   // 大于中心点范围: [j, hi - 1)
@@ -19,25 +19,24 @@ function partitio(A, lo, hi) {
     if (A[i] <= pivot) {
       i++;
     } else {
-      console.log(A);
-      swap(A, i, --j);
+      j -= 1;
+      swap(A, i, j);
     }
   }
-  console.log(`j: ${j}`);
-  console.log(`i: ${i}`);
   // 中心点交换
-  swap(A, j, hi - 1);
+  swap(A, j, hi);
   return j;
 }
 
 function qsort(A, left = 0, right = A.length - 1) {
   if (right <= left) return;
   let p = partitio(A, left, right);
+  console.log("ppp", p);
   qsort(A, left, p);
   qsort(A, p + 1, right);
 }
 
 // 排序test
-const A = [10, 50, 40, 90, 20, 70, 60, 99, 88, 22, 455];
+const A = [1, 5, 4, 9, 2, 7, 6, 10, 8, 3, 0];
 qsort(A);
-console.log(A);
+console.log("A:::", A);
