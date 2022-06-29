@@ -1,12 +1,13 @@
 {
-  "name": "JavaScript_dataStructure",
+  "name": "TypeScript_dataStructure",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/joinmouse/JavaScript_dataStructure.git",
   "author": "frank.wu <frank.wu@imile.me>",
   "license": "MIT",
   "scripts": {
-    "lru": "npx ts-node ./LRUCache/index.ts"
+    "lru": "npx ts-node ./LRUCache/index.ts",
+    "dp": "npx ts-node ./DynamicProgramming/fib/dp_space_index.ts"
   },
   "devDependencies": {
     "@types/node": "^17.0.29"
