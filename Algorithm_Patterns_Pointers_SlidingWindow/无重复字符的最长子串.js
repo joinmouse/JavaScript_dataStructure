@@ -9,22 +9,24 @@
  * @returns {number} - 无重复字符的最长子串长度
  */
 export function lengthOfLongestSubstring(s) {
-    let left = 0; // 滑动窗口左指针
-    let maxLength = 0; // 记录最长子串长度
-    const charIndexMap = new Map(); // 存储字符及其最新索引
+    // TODO: 请在这里实现滑动窗口算法
+    let left = 0; // 窗口左指针
 
-    // 遍历字符串
+    let maxLength = 0; // 记录最大长度
+
+    const charSet = new Set(); // 用于存储当前窗口内的字符
+
     for (let right = 0; right < s.length; right++) {
-        // 字符重复，移动左指针
-        if (charIndexMap.has(s[right])) {
-            left = Math.max(left, charIndexMap.get(s[right]) + 1);
+        const char = s[right];  // 当前右侧字符
+        while(charSet.has(char)) {
+            charSet.delete(s[left]);  // 移除左侧字符
+            left++;  // 收缩左侧窗口
         }
 
-        charIndexMap.set(s[right], right); // 更新字符索引
-
-        // 对比并更新最大长度
-        maxLength = Math.max(maxLength, right - left + 1);
+        // 正常逻辑
+        charSet.add(char);
+        maxLength = Math.max(maxLength, right - left + 1); // 更新最大长度
     }
-    
+
     return maxLength;
 }
